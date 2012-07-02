@@ -12,6 +12,19 @@
 	document.head.appendChild(ss);
 
 	// reload file. add by gyk001
+	var nocache = document.createElement('meta');
+	nocache['http-equiv']='cache-control';
+	nocache['content'] = 'no-cache'
+	document.head.appendChild(nocache);
+	nocache = document.createElement('meta');
+	nocache['pragma']='no-cache';
+	document.head.appendChild(nocache);
+	nocache = document.createElement('meta');
+	nocache['expires']='-1';
+	document.head.appendChild(nocache);
+	
+	
+	
 	setTimeout(function() {
 	    location.reload();
         }, 3000);
