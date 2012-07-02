@@ -13,18 +13,18 @@
 
 	// reload file. add by gyk001
 	var nocache = document.createElement('meta');
-	nocache['http-equiv'] ='cache-control';
-	nocache['content'] = 'no-cache';
+	nocache.setAttribute('http-equiv','cache-control');
+	nocache.setAttribute('content','no-cache');
 	document.head.appendChild(nocache);
 	nocache = document.createElement('meta');
-	nocache['pragma'] ='no-cache';
+	nocache.setAttribute('pragma','no-cache');
 	document.head.appendChild(nocache);
 	nocache = document.createElement('meta');
-	nocache['expires'] ='-1';
+	nocache.setAttribute('expires','-1');
 	document.head.appendChild(nocache);
-	
-	
-	
+
+
+
 	setTimeout(function() {
 	    location.reload();
         }, 3000);
